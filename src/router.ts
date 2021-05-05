@@ -23,6 +23,11 @@ export default new Router({
       path: '/regl',
       name: 'regl',
       component: () => import('./views/Regl.vue')
+    },
+    {
+      path: '/single',
+      name: 'single',
+      component: () => import('./views/SingleTile.vue')
     }
   ]
 })

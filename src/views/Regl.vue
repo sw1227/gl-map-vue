@@ -7,8 +7,8 @@ import Vue from 'vue'
 import REGL from 'regl'
 
 // Shaders
-import vert from '../assets/glsl/test.vert'
-import frag from '../assets/glsl/test.frag'
+import vert from '../assets/glsl/regl-test/test.vert'
+import frag from '../assets/glsl/regl-test/test.frag'
 
 type TriangleProp = {
   color: [number, number, number, number]
