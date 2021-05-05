@@ -1,23 +1,14 @@
 <template>
-  <div id="regl"></div>
+  <div id="regl" />
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 import REGL from 'regl'
 
-const frag = `
-precision mediump float;
-uniform vec4 color;
-void main() {
-  gl_FragColor = color;
-}`
-const vert = `
-precision mediump float;
-attribute vec2 position;
-void main() {
-  gl_Position = vec4(position, 0, 1);
-}`
+// Shaders
+import vert from '../assets/glsl/test.vert'
+import frag from '../assets/glsl/test.frag'
 
 type TriangleProp = {
   color: [number, number, number, number]
@@ -30,7 +21,7 @@ export default Vue.extend({
     }
   },
   mounted () {
-    const regl = REGL()
+    const regl = REGL('#regl')
     const options: REGL.DrawConfig = {
       frag: frag,
       vert: vert,
@@ -65,3 +56,10 @@ export default Vue.extend({
 })
 
 </script>
+
+<style scoped>
+#regl {
+  width: 100vw;
+  height: 100vh;
+}
+</style>
