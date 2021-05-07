@@ -13,7 +13,7 @@ import vert from '../assets/glsl/single-tile/quad.vert'
 import frag from '../assets/glsl/single-tile/quad.frag'
 
 // Sample Tile
-const tile: TileCoord = { z: 13, x: 7262, y: 3232 }
+const tile = TileCoord.from(13, 7262, 3232)
 
 export default Vue.extend({
   data () {
