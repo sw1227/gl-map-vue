@@ -33,6 +33,11 @@ export default new Router({
       path: '/multiple',
       name: 'multiple',
       component: () => import('./views/MultipleTiles.vue')
+    },
+    {
+      path: '/map-view',
+      name: 'map-view',
+      component: () => import('./views/MapView.vue')
     }
   ]
 })
