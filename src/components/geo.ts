@@ -82,7 +82,7 @@ function getTileFromPixel (pixel: PixelCoord): TileCoord {
 }
 
 // 与えられたピクセル座標を緯度経度に変換
-function pixelToLatLon (pixel: PixelCoord): LatLon {
+export function pixelToLatLon (pixel: PixelCoord): LatLon {
   const L: Degree = 85.05112878
   const lat = rad2deg(Math.asin(Math.tanh(
     -(Math.PI * pixel.y / (1 << (pixel.z + 7))) + Math.atanh(Math.sin(deg2rad(L)))
